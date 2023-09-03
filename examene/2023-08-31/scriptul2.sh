@@ -129,7 +129,8 @@ else
             # If not exist, we shouldn't check any further
             continue
         fi
-
+        
+        # If we have --check-files we should stop here
         if [[ $check_files = 1 ]]
         then
             continue
@@ -177,7 +178,8 @@ else
             [[ $quiet = 0 ]] && echo $file incorrect gowner $gowner, expected $check_gowner
             return_code=1
         fi
-
+        
+        # If we have --check-metadata we should stop here
         if [[ $check_meta = 1 ]]
         then
             continue
