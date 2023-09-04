@@ -78,7 +78,7 @@ then
     fi
 fi
 
-if [[ $# -ge 2 ]]
+if [[ $# -gt 2 ]]
 then 
     for user in $@
     do
