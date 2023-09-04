@@ -54,7 +54,8 @@ then
             sum+=$i
         done
 
-        ps -u $1 
+        ps -u $1
+        exit 0
     fi
 
     if grep -Eq "^$1:" /etc/passwd && grep -Eq "^$2:" /etc/passwd
